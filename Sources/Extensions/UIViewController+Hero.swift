@@ -142,7 +142,7 @@ public extension UIViewController {
 
   internal class var sharedApplication: UIApplication? {
     let selector = NSSelectorFromString("sharedApplication")
-    return UIApplication.perform(selector)?.takeRetainedValue() as? UIApplication
+    return UIApplication.perform(selector)?.takeUnretainedValue() as? UIApplication
   }
 }
 
